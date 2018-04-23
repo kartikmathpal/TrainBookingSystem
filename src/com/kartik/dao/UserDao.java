@@ -1,12 +1,13 @@
 package com.kartik.dao;
 
+import com.kartik.dao.interfaces.IUserDao;
 import com.kartik.entity.User;
 import com.kartik.exceptions.InvalidUserCredentialsException;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDao {
+public class UserDao implements IUserDao {
 
     private static List<User> users;
 
@@ -17,7 +18,7 @@ public class UserDao {
         users.add(new User("mayank","lohani"));
     }
 
-
+    @Override
     public   User searchUser(User user) throws Exception{
         Boolean userFound = false;
         for(User user1: users) {
