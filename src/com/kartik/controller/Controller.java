@@ -8,13 +8,14 @@ import java.util.Scanner;
 public class Controller {
     private static Scanner scanner;
 
+    UserService userService = new UserService();
     public Controller() {
     }
 
     public void initialize() {
         try {
-            User user = UserService.requestUserLogin();
-            System.out.println("Login was succesfull");
+            User user = userService.requestUserLogin();
+            System.out.println("Login was succesfull for user" + user);
 
             // if login successfulll then enter to trin service
 

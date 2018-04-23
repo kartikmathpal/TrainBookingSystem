@@ -18,7 +18,7 @@ public class UserDao {
     }
 
 
-    public static User searchUser(User user) throws Exception{
+    public   User searchUser(User user) throws Exception{
         Boolean userFound = false;
         for(User user1: users) {
             if(user1.getUserName().equalsIgnoreCase(user.getUserName())
